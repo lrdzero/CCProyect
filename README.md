@@ -4,7 +4,7 @@ El proyecto consiste en la creación de un sistema de mensajería en tiempo real
 red social. 
 
 Para ello quiero disponer de:
-*Mi propia BD (para este modulo) utilizando la tecnología proporcionada por MYSQL.
+*[Mi propia BD (para este modulo) utilizando la tecnología proporcionada por MYSQL.]
 *Una aplicación web base en la que mostrar el chat mediante el uso de python o javascrip.
 *Servidor implementado en java para gestión de transferencia de mensajes para pruebas.
 *Servidor webservices emulando el anterior.
