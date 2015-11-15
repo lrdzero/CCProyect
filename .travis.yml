@@ -7,6 +7,6 @@ node_js:
   - "0.10"
   - "0.8"
   - "0.6"
-  - "iojs"
-addons:
-  mariadb: '10.0'
+before_install:
+   - npm install -g mocha
+   - npm install -g sqlite3
