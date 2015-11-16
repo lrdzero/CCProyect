@@ -1,7 +1,8 @@
 ##CCProyect:
 ![travis](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/travis08.png)
-El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta
-red social. 
+
+
+El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. 
 
 Para ello quiero disponer de:
 
