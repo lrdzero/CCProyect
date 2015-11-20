@@ -1,5 +1,5 @@
 ##CCProyect:
-![travis](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)
+![(https://travis-ci.org/lrdzero/CCProyect/branches)](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)
 
 
 El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. 
