@@ -1,13 +1,3 @@
-# Directorio instalación módulos
-node_modules
-
-
-# Directorio con documentación
-doc
-
-# Archivo de base de datos
-database.db
-
 # Logs y copias de seguridad
 *.log
 *~
