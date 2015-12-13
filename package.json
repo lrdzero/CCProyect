@@ -1,7 +1,7 @@
 {
   "name": "ccproyect",
   "version": "1.0.0",
-  "description": "cc proyect",
+  "description": "Una",
   "main": "lib/mensajeria.js",
   "directories": {
     "test": "test"
@@ -18,15 +18,14 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "mocha test/test.js",
-    "start": "node lib/mensajeria.js"
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lrdzero/CCProyect.git"
   },
   "keywords": [
-    "CC"
+    "cc"
   ],
   "author": "Rosendo Ismael Fernandez Perez",
   "license": "ISC",
