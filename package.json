@@ -2,7 +2,7 @@
   "name": "ccproyect",
   "version": "1.0.0",
   "description": "CC proyecto",
-  "main": "Gruntfile.js",
+  "main": "lib/mensajeria.js",
   "directories": {
     "doc": "docs",
     "test": "test"
@@ -11,9 +11,6 @@
     "body-parser": "^1.14.1",
     "docco": "^0.7.0",
     "express": "^4.13.3",
-    "grunt-cli": "0.4.5",
-    "grunt": "^0.4.5",
-    "grunt-docco": "^0.4.0",
     "node": "^0.0.0",
     "node-sass": "^3.4.2",
     "sqlite3": "^3.1.1",
