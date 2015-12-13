@@ -1,5 +1,6 @@
 ##CCProyect:
 [![Build Status](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)](https://travis-ci.org/lrdzero/CCProyect/branches)
+
 [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/apps/agile-falls-2001/resources)
 
 
@@ -15,6 +16,12 @@ Para ello quiero disponer de:
 
 Finalmente quedarón descartadas las opciones de webservices y python en post de node js, el uso del modulo express y BD con sqlite3.
 
+Para instalar la aplicación clonar el repositorio y llevara acabo
 
+      npm install
+      npm start
+
+La aplicación de despliega en:
+      localhost:5000
       
 
