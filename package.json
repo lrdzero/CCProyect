@@ -4,6 +4,7 @@
   "description": "Una",
   "main": "lib/mensajeria.js",
   "directories": {
+    "doc": "docs",
     "test": "test"
   },
   "dependencies": {
@@ -15,6 +16,8 @@
     "supertest": "^1.1.0"
   },
   "devDependencies": {
+    "docco": "^0.7.0",
+    "grunt-docco": "^0.4.0",
     "mocha": "^2.3.4"
   },
   "scripts": {
