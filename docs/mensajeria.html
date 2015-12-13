@@ -138,6 +138,8 @@
             
             <div class="content"><div class='highlight'><pre>app.use(bodyParser.urlencoded({ extended: <span class="hljs-literal">false</span> }));
 
+app.set(<span class="hljs-string">'ip'</span>, process.env.IP|| <span class="hljs-string">'0.0.0.0'</span>);
+app.set(<span class="hljs-string">'port'</span>, (process.env.PORT || <span class="hljs-number">5000</span>));
 <span class="hljs-keyword">var</span> moduloExport={};
 
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Server iniciado"</span>);
@@ -203,7 +205,10 @@ app.post(<span class="hljs-string">'/registraUser'</span>,<span class="hljs-func
 	
 });
 <span class="hljs-built_in">module</span>.exports = moduloExport;
-app.listen(<span class="hljs-number">3000</span>)</pre></div></div>
+<span class="hljs-built_in">module</span>.exports =app;
+app.listen(app.get(<span class="hljs-string">'port'</span>), <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Node app is running on port'</span>, app.get(<span class="hljs-string">'port'</span>) + <span class="hljs-string">'liste adress demand: '</span>+app.get(<span class="hljs-string">'ip'</span>));
+});</pre></div></div>
             
         </li>
         

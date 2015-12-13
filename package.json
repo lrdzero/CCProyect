@@ -1,7 +1,7 @@
 {
   "name": "ccproyect",
   "version": "1.0.0",
-  "description": "JSON proyecto cc",
+  "description": "CC proyecto",
   "main": "Gruntfile.js",
   "directories": {
     "doc": "docs",
