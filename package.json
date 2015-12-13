@@ -17,10 +17,12 @@
     "grunt-docco": "^0.4.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
   },
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha test/test.js",
+    "start": "node lib/mensajeria.js"
   },
   "repository": {
     "type": "git",
