@@ -1,14 +1,17 @@
 'use strict';
-
+var request = require("supertest");
 var prueba = require('../lib/mensajeria');
 var assert = require("assert");
 
 
-describe("TEST",function(){
-it('Creación de usuario', function(done) {
-    prueba.insertarUsuario("usuarioxxx",12); 
-    prueba.comprobacion("usuarioxxx",function(err,resultado){
-			assert.equal(resultado, true)});
-    done();
-  });
+describe("TEST",function()
+{
+it("Página inicial", function(done) {
+		request(prueba)
+			.get("/")
+			.expect("Content-Type", /text\/html/)
+			.expect(200, done);
+	});
+
+
 });
