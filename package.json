@@ -1,0 +1,37 @@
+{
+  "name": "ccproyect",
+  "version": "1.0.0",
+  "description": "cc proyect",
+  "main": "lib/mensajeria.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "node": "^0.0.0",
+    "node-sass": "^3.4.2",
+    "sqlite3": "^3.1.1",
+    "supertest": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha test/test.js",
+    "start": "node lib/mensajeria.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrdzero/CCProyect.git"
+  },
+  "keywords": [
+    "CC"
+  ],
+  "author": "Rosendo Ismael Fernandez Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrdzero/CCProyect/issues"
+  },
+  "homepage": "https://github.com/lrdzero/CCProyect#readme"
+}
