@@ -1,7 +1,7 @@
 {
   "name": "ccproyect",
   "version": "1.0.0",
-  "description": "Proyecto para CC",
+  "description": "Proyecto cc",
   "main": "Gruntfile.js",
   "directories": {
     "doc": "docs",
@@ -9,14 +9,15 @@
   },
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3",
     "docco": "^0.7.0",
+    "express": "^4.13.3",
+    "foreman": "^1.4.1",
     "grunt": "^0.4.5",
     "grunt-docco": "^0.4.0",
-    "sqlite3": "^3.1.1",
     "grunt-docco-dir": "^0.1.5",
     "node": "^0.0.0",
     "node-sass": "^3.4.2",
+    "sqlite3": "^3.1.1",
     "supertest": "^1.1.0"
   },
   "devDependencies": {
@@ -24,14 +25,14 @@
   },
   "scripts": {
     "test": "mocha test/test.js",
-    "start": "node lib/mensajeria"
+    "start": "node lib/mensajeria.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lrdzero/CCProyect.git"
   },
   "keywords": [
-    "CC"
+    "cc"
   ],
   "author": "lrdzero",
   "license": "ISC",
