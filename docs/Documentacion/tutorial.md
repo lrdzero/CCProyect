@@ -10,3 +10,8 @@ Tambien mediante la especificación de Automatic Deploy a partir de la conexión
 las herramientas de integracióncontinua y el PaaS tal y como se especificó en el despliegue tra el CI. Esto se puede comprobar tras
 realizar un commit.
 
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW37.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW38.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW39.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW40.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW41.png)
