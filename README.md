@@ -23,5 +23,9 @@ Para instalar la aplicación clonar el repositorio y llevara acabo
 
 La aplicación de despliega en:
       localhost:5000
+
+De esta manera se despliega de forma local.
+
+Para llevar a cabo el despliegue en Heroku se lleva a cabo el siguiente [tutorial]()
       
 
