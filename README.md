@@ -26,6 +26,6 @@ La aplicación de despliega en:
 
 De esta manera se despliega de forma local.
 
-Para llevar a cabo el despliegue en Heroku se lleva a cabo el siguiente [tutorial]()
+Para llevar a cabo el despliegue en Heroku se lleva a cabo el siguiente [tutorial](https://github.com/lrdzero/CCProyect/blob/master/docs/Documentacion/tutorial.md)
       
 
