@@ -11,7 +11,11 @@ las herramientas de integracióncontinua y el PaaS tal y como se especificó en 
 realizar un commit.
 
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW37.png)
+Travis:
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW38.png)
+Snap-ci (falla al reconocer el comando grunt aún estando especificado en el packaje.json)
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW39.png)
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW40.png)
+
+Activity Feed Heroku
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/EjercicioHW41.png)
