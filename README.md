@@ -4,9 +4,9 @@ El proyecto consiste en la creación de un sistema de mensajería en tiempo real
 
 Dispondrá de la siguiente funcionalidad:
 
-1.Registrarse en el chat.
-2.Escribir mensajes.
-3.Recibir mensajes.
+- Registrarse en el chat.
+- Escribir mensajes.
+- Recibir mensajes.
 
 Para ello quiero disponer de los siguiente utilizando las tecnologías conocidas:
 
