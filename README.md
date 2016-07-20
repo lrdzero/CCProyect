@@ -1,6 +1,8 @@
 #CCProyect:
 
-El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. 
+El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. Inicialmente con objetivo de desarrollo personal.
+
+En principio se penso como módulo de un proyecto de mayor envergadura: "Red Social". Finalmente se llevará a cabo la creación simple de un chat con el objetivo de comprobar la funcionalidad de NodeJS y obtener hábito de control de versiones y despliegue de la aplicación.
 
 ###Dispondrá de la siguiente funcionalidad:
 
