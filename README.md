@@ -2,13 +2,13 @@
 
 El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. 
 
-Dispondrá de la siguiente funcionalidad:
+###Dispondrá de la siguiente funcionalidad:
 
 - Registrarse en el chat.
 - Escribir mensajes.
 - Recibir mensajes.
 
-Para ello quiero disponer de los siguiente utilizando las tecnologías conocidas:
+###Requeriminetos y tecnologías:
 
 - Mi propia BD (para este modulo) utilizando la tecnología proporcionada por sqlite3.
 
