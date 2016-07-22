@@ -143,13 +143,28 @@ app.set(<span class="hljs-string">'port'</span>, (process.env.PORT || <span clas
 <span class="hljs-keyword">var</span> moduloExport={};
 
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Server iniciado"</span>);
-app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+
+app.get(<span class="hljs-string">'/'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
+<span class="hljs-keyword">var</span> pagina=<span class="hljs-string">'&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;'</span>;   
+    pagina+= <span class="hljs-string">'&lt;form action=\"Registro\" method=\"post\"&gt;'</span>;
+    pagina += <span class="hljs-string">'&lt;br&gt;&lt;a href="/chat.html"&gt;Iniciar&lt;/a&gt;&lt;/br&gt;'</span>;
+    pagina += <span class="hljs-string">'&lt;br&gt;&lt;input type=\"submit\" value=\"Registrar\"&gt;&lt;/br&gt;'</span>;
+    
+    pagina += <span class="hljs-string">'&lt;/form&gt;'</span>;
+    pagina += <span class="hljs-string">'&lt;/body&gt;&lt;/html&gt;'</span>;
+	res.send(pagina);
+});
+app.post(<span class="hljs-string">'/unaAccion'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>) </span>{
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"mensaje"</span>);
+});
+app.post(<span class="hljs-string">'/Registro'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
   <span class="hljs-keyword">var</span> pagina=<span class="hljs-string">'&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;'</span>;   
-    pagina +=<span class="hljs-string">'&lt;form action=\"registraUser\" method=\"post\"&gt; Usuario: &lt;input type=\"text" name=\"nick\" size=\"10\"&gt;&lt;br&gt;clave: &lt;input type=\"text" name=\"pass\" size=\"10\"&gt;&lt;br&gt;&lt;input type=\"submit\" value=\"Registrar\"&gt;&lt;/fomr&gt;&lt;br&gt;'</span>;  
+    pagina +=<span class="hljs-string">'&lt;form action=\"registraUser\" method=\"post\"&gt; Usuario: &lt;input type=\"text" name=\"nick\" size=\"10\"&gt;&lt;br&gt;clave: &lt;input type=\"text" name=\"pass\" size=\"10\"&gt;&lt;br&gt;&lt;input type=\"submit\" value=\"Registrar\"&gt;&lt;/form&gt;&lt;br&gt;'</span>;  
     pagina += <span class="hljs-string">'&lt;a href="/chat.html"&gt;Iniciar&lt;/a&gt;'</span>;
     pagina += <span class="hljs-string">'&lt;/body&gt;&lt;/html&gt;'</span>;
     res.send(pagina);
 });
+
 moduloExport.comprobacion= <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nombre1,id,res</span>)</span>{
 	
 	<span class="hljs-keyword">var</span> result =<span class="hljs-literal">false</span>;
@@ -171,6 +186,7 @@ moduloExport.comprobacion= <span class="hljs-function"><span class="hljs-keyword
 	
 });
 }
+
 moduloExport.insertarUsuario=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nombre,valor</span>)</span>{
 	db.run(<span class="hljs-string">"Insert into usuario values(?,?2)"</span>,{<span class="hljs-number">1</span>:nombre,<span class="hljs-number">2</span>:valor});
 }
@@ -183,25 +199,28 @@ app.post(<span class="hljs-string">'/registraUser'</span>,<span class="hljs-func
 	moduloExport.comprobacion(nombre,id,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err,resultado</span>)</span>{
 		<span class="hljs-keyword">if</span>(!resultado){
 			<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Insertando"</span>);
+			<span class="hljs-built_in">console</span>.log(nombre);
+			<span class="hljs-built_in">console</span>.log(id);
 			moduloExport.insertarUsuario(nombre,id);
+			
 			<span class="hljs-keyword">var</span> pagina=<span class="hljs-string">'&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;'</span>;
-      			pagina +=<span class="hljs-string">'&lt;form action=\"registraUser\" method=\"post\"&gt; Usuario: &lt;input type=\"text" name=\"valor\" size=\"10\"&gt;&lt;br&gt;clave: &lt;input type=\"text" name=\"aBorrar\" size=\"10\"&gt;&lt;br&gt;&lt;input type=\"submit\" value=\"Registrar\"&gt;&lt;/fomr&gt;&lt;br&gt;'</span>;
 			pagina +=<span class="hljs-string">'&lt;p&gt;Registrado&lt;/p&gt;'</span>;
-    			pagina += <span class="hljs-string">'&lt;a href="/chat.html"&gt;Retornar&lt;/a&gt;'</span>;
+    			pagina += <span class="hljs-string">'&lt;a href="/"&gt;Retornar&lt;/a&gt;'</span>;
     			pagina += <span class="hljs-string">'&lt;/body&gt;&lt;/html&gt;'</span>;
-    			res.send(pagina);
+    			
 			
 		}
 		<span class="hljs-keyword">else</span>{
 			<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"No insertado"</span>);
 			<span class="hljs-keyword">var</span> pagina=<span class="hljs-string">'&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;'</span>;
-      			pagina +=<span class="hljs-string">'&lt;form action=\"registraUser\" method=\"post\"&gt; Usuario: &lt;input type=\"text" name=\"valor\" size=\"10\"&gt;&lt;br&gt;clave: &lt;input type=\"text" name=\"aBorrar\" size=\"10\"&gt;&lt;br&gt;&lt;input type=\"submit\" value=\"Registrar\"&gt;&lt;/fomr&gt;&lt;br&gt;'</span>;
 			pagina +=<span class="hljs-string">'&lt;p&gt;Usuario ya registrado&lt;/p&gt;'</span>;
-    			pagina += <span class="hljs-string">'&lt;a href="/chat.html"&gt;Retornar&lt;/a&gt;'</span>;
+    			pagina += <span class="hljs-string">'&lt;a href="/"&gt;Retornar&lt;/a&gt;'</span>;
     			pagina += <span class="hljs-string">'&lt;/body&gt;&lt;/html&gt;'</span>;
-   			res.send(pagina);
+   			
 		}
+		res.send(pagina);
 	});
+	
 	
 });
 <span class="hljs-built_in">module</span>.exports = moduloExport;
