@@ -19,7 +19,7 @@ En principio se penso como módulo de un proyecto de mayor envergadura: "Red Soc
 
 - Una aplicación web base en la que mostrar el chat mediante el uso de javascript node.
 
-- Servidor implementado en java para gestión de transferencia de mensajes para pruebas.
+- Servidor implementado utilizando java para gestión de transferencia de mensajes para pruebas.
 
 
 
