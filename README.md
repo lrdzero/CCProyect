@@ -1,3 +1,6 @@
+
+Travis CI [![Build Status](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)](https://travis-ci.org/lrdzero/CCProyect)
+
 #CCProyect:
 
 El proyecto consiste en la creación de un sistema de mensajería en tiempo real (chat) entre usuarios afiliados a cierta red social. Inicialmente con objetivo de desarrollo personal.
