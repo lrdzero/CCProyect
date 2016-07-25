@@ -5,8 +5,7 @@ node_modules
 doc
 
 # Archivo de base de datos
-midatabase.db
-database.db
+
 
 # Logs y copias de seguridad
 *.log
