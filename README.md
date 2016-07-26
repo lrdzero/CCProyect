@@ -289,5 +289,5 @@ El contenido del `Procfile` en nuestro caso debe ser el siguiente:
 Dentro de la página de heroku, seleccionamos nuestra app y vamos a las opciones "Deploy".
 Allí podemos configurar nuestra aplicación de forma que se linkee con cualquier cambio llevado a cabo en nuestro github.
 
-![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/Scene.png)
-![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/coneect.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/finii.png)
+
