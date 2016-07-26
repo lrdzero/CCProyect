@@ -1,4 +1,3 @@
-
 # CCProyect
 
 FROM    ubuntu:latest
