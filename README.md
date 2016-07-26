@@ -221,3 +221,73 @@ before_install:
 Para generar el contenido de la documentación hemos utilizado el generador Grunt-docco.
 
 Siguiendo los pasos descritos en el apartado correspondiente del [material del primer tema](http://jj.github.io/CC/documentos/temas/Desarrollo_basado_en_pruebas).
+
+#Hito 3
+
+##Despliegue de la aplicación en Heroku.
+
+Se ha llevado a cabo el despliegue de la aplicación mediante sincronización de la aplicación con la plataforma Heroku. Se puede acceder a la misma mediante esta [**enlace**](https://ccproyect-v-2.herokuapp.com/).
+
+##Despliegue manual:
+
+Para llevar a cabo el despliegue de la aplicación he llevado a cabo los siguientes pasos:
+
+- Creamos el archivo `Procfile` con el que indicamos el tipo de aplicación que vamos a desplegar y los comandos necesarios para lanzarla.
+
+El contenido del `Procfile` en nuestro caso debe ser el siguiente:
+```
+	web: node lib/mensajeria.js
+```
+- Posicionarme en mi repositorio local y obtener el toolbelt de heroku:
+```
+	wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+```
+- Logearme mediante comando del toolbet; Previamente ya disponia de una cuenta en heroku (SI no se dispone de cliente, este comando lo instala automáticamente).
+
+```
+	heroku login
+```
+- Tras esto pasamos a la creación de la app, su linkeo con nuestro repositorio y su configuración para despliegue:
+```
+	heroku create ccproyect-v-2
+	...
+	
+	...
+	
+	heroku:git remote -a ccproyect-v-2
+	...
+	
+	...
+	heroku config:set DISABLE_COLLECTSTATIC=1
+	...
+	
+	...
+	
+```
+
+- Finalmete asignamos los espacios de trabajo necesarios:
+```
+	heroku ps:scale web=1
+```
+
+- Ahora debemos hacer un push a nuestro repositorio mediante heroku:
+
+```
+	git add .
+	git commit -m "Añadido para despliegue heroku"
+	git push heroku master
+```
+
+- Con esto hecho lanzamos la aplicación:
+
+```
+	heroku open
+```
+
+##Añadiendo despliegue automático:
+
+Dentro de la página de heroku, seleccionamos nuestra app y vamos a las opciones "Deploy".
+Allí podemos configurar nuestra aplicación de forma que se linkee con cualquier cambio llevado a cabo en nuestro github.
+
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/Scene.png)
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/coneect.png)
