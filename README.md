@@ -291,3 +291,27 @@ Allí podemos configurar nuestra aplicación de forma que se linkee con cualquie
 
 ![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/finii.png)
 
+#Hito 4
+
+Para llevar a cabo el despliegue de docker he llevado a cobo los pasos previos que describí en el ejercicio número 12 del último tema de la asignatura:
+- [**Ejercicio 12**](https://github.com/lrdzero/ejercicios/blob/master/ejercicios%203/ejercicio12.md#ejercicio-12).
+
+Teniendo en cuenta que se han llevado a cabo los pasos previos de creación del archivo Dockerfile, este archivo contiene en mi caso:
+
+```
+	# CCProyect
+
+FROM    ubuntu:latest
+MAINTAINER Rosendo Ismael Fernandez Perez <elendil.capt.gondor@gmail.com> Version: 1.0
+
+# Instalar todos los paquetes necesarios para poder realizar realizar el proyecto de CC
+RUN apt-get -y install wget
+RUN wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
+RUN sudo apt-get install -y git nodejs
+RUN node -v
+RUN git clone https://github.com/lrdzero/CCProyect.git /home/CCProyect
+RUN cd /home/CCProyect && npm install
+
+```
+
+Siguiendo los pasos descritos en el enlaze del ejercicio 12 llevamos a cabo el despliegue.
