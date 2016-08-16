@@ -9,4 +9,5 @@ RUN apt-get -y install sudo
 # Instalar todos los paquetes necesarios para poder realizar realizar el proyecto de CC
 RUN sudo apt-get install -y git 
 RUN git clone https://github.com/lrdzero/CCProyect.git /home/CCProyect
-RUN cd /home/CCProyect && npm install
+RUN cd /home/CCProyect
+RUN npm install
