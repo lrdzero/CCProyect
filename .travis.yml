@@ -9,3 +9,4 @@ before_install:
    - npm install -g mocha
    - npm install -g sqlite3
    - npm install -g grunt-cli
+   - npm install docco grunt-docco
