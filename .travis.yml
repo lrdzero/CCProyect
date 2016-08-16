@@ -8,4 +8,4 @@ node_js:
 before_install:
    - npm install -g mocha
    - npm install -g sqlite3
-   - npm install grunt-cli -g
+   - npm install -g grunt-cli
