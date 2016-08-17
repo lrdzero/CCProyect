@@ -1,5 +1,7 @@
 
-Travis CI [![Build Status](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)](https://travis-ci.org/lrdzero/CCProyect) Heroku [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://ccproyect-v-2.herokuapp.com/)
+Travis CI [![Build Status](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)](https://travis-ci.org/lrdzero/CCProyect)
+Heroku [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://ccproyect-v-2.herokuapp.com/)
+Snap-ci [![Build Status](https://snap-ci.com/lrdzero/CCProyect/branch/master/build_image)](https://snap-ci.com/lrdzero/CCProyect/branch/master)
 
 #CCProyect:
 
@@ -56,7 +58,7 @@ Tras la obtención de ambas y comprobar que usamos la version de node desplegamo
 El código del `packaje.json` es el siguiente:
 
 ```
-      {
+ {
   "name": "ccproyect",
   "version": "1.0.0",
   "description": "Proyecto cc",
@@ -70,23 +72,27 @@ El código del `packaje.json` es el siguiente:
     "docco": "^0.7.0",
     "express": "^4.13.3",
     "foreman": "^1.4.1",
+    "node": "^0.0.0",
     "grunt": "^0.4.5",
     "grunt-docco": "^0.4.0",
     "grunt-docco-dir": "^0.1.5",
-    "node": "^0.0.0",
     "node-sass": "^3.4.2",
     "sqlite3": "^3.1.1",
     "supertest": "^1.1.0"
   },
   "devDependencies": {
+    "mocha": "^2.3.4",
     "docco": "^0.7.0",
     "grunt-docco": "^0.4.0",
-    "mocha": "^2.3.4"
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+  "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0"
   },
   "scripts": {
     "test": "mocha test/test.js ",
-    "start": "node lib/mensajeria.js",
-    "docco": "grunt docco"
+    "start": "node lib/mensajeria.js"
   },
   "repository": {
     "type": "git",
@@ -299,18 +305,28 @@ Para llevar a cabo el despliegue de docker he llevado a cobo los pasos previos q
 Teniendo en cuenta que se han llevado a cabo los pasos previos de creación del archivo Dockerfile, este archivo contiene en mi caso:
 
 ```
-	# CCProyect
+# CCProyect
 
-FROM    ubuntu:latest
-MAINTAINER Rosendo Ismael Fernandez Perez <elendil.capt.gondor@gmail.com> Version: 1.0
+FROM ubuntu:precise
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y python-software-properties python g++ make redis-server libicu-dev libexpat1
+RUN add-apt-repository ppa:chris-lea/node.js
+RUN apt-get update
+RUN apt-get install -y nodejs
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# Instalar todos los paquetes necesarios para poder realizar realizar el proyecto de CC
-RUN apt-get -y install wget
-RUN wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
-RUN sudo apt-get install -y git nodejs
-RUN node -v
-RUN git clone https://github.com/lrdzero/CCProyect.git /home/CCProyect
-RUN cd /home/CCProyect && npm install
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
+
+# Bundle app source
+COPY . /usr/src/app
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
 
 ```
 
