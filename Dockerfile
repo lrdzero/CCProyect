@@ -6,7 +6,6 @@ MAINTAINER Rosendo Ismael Fernandez Perez <elendil.capt.gondor@gmail.com> Versio
 RUN apt-get -y update
 RUN apt-get -y install sudo
 RUN apt-get install -y nodejs
-RUN apt-get install npm
 
 # Instalar todos los paquetes necesarios para poder realizar realizar el proyecto de CC
 RUN sudo apt-get install -y git 
