@@ -1,4 +1,4 @@
-Versión [![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000?style=plastic)]()
+Versión [![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000?style=plastic)](https://nodejs.org/en/)
 Issues [![GitHub issues](https://img.shields.io/github/issues/lrdzero/CCProyect.svg)](https://github.com/lrdzero/CCProyect/issues)
 Licencia [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://raw.githubusercontent.com/lrdzero/CCProyect/master/LICENSE.md)
 Forks [![GitHub forks](https://img.shields.io/github/forks/lrdzero/CCProyect.svg)](https://github.com/lrdzero/CCProyect/network)
