@@ -1,8 +1,12 @@
-
+Versión [![node](https://img.shields.io/node/v/gh-badges.svg?maxAge=2592000?style=plastic)]()
+Issues [![GitHub issues](https://img.shields.io/github/issues/lrdzero/CCProyect.svg)](https://github.com/lrdzero/CCProyect/issues)
+Licencia [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://raw.githubusercontent.com/lrdzero/CCProyect/master/LICENSE.md)
+Forks [![GitHub forks](https://img.shields.io/github/forks/lrdzero/CCProyect.svg)](https://github.com/lrdzero/CCProyect/network)
 Travis CI [![Build Status](https://travis-ci.org/lrdzero/CCProyect.svg?branch=master)](https://travis-ci.org/lrdzero/CCProyect)
 Heroku [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://ccproyect-v-2.herokuapp.com/)
 Snap-ci [![Build Status](https://snap-ci.com/lrdzero/CCProyect/branch/master/build_image)](https://snap-ci.com/lrdzero/CCProyect/branch/master)
 Docker Hub [![Docker](https://dl.dropboxusercontent.com/s/s2bk0bksp92rtuq/docker.png)](https://hub.docker.com/r/lrdzero/ccproyect/)
+
 
 #CCProyect:
 
