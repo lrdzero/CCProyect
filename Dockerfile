@@ -1,14 +1,11 @@
-# CCProyect
-
-FROM    ubuntu:latest
-MAINTAINER Rosendo Ismael Fernandez Perez <elendil.capt.gondor@gmail.com> Version: 1.0
-
-RUN apt-get -y update
-RUN apt-get -y install sudo
+FROM ubuntu:precise
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y python-software-properties python g++ make redis-server libicu-dev libexpat1
+RUN add-apt-repository ppa:chris-lea/node.js
+RUN apt-get update
 RUN apt-get install -y nodejs
-
-# Instalar todos los paquetes necesarios para poder realizar realizar el proyecto de CC
-RUN sudo apt-get install -y git 
-RUN git clone https://github.com/lrdzero/CCProyect.git /home/CCProyect
-RUN cd /home/CCProyect
-RUN npm install
+ADD . ./sockethub
+RUN cd sockethub && npm install
+CMD cd sockethub && ./bin/docker.sh
+EXPOSE 10550
