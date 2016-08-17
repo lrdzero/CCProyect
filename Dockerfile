@@ -5,6 +5,8 @@ RUN apt-get install -y python-software-properties python g++ make redis-server l
 RUN add-apt-repository ppa:chris-lea/node.js
 RUN apt-get update
 RUN apt-get install -y nodejs
-RUN cd /home/CCProyect
-RUN npm isntall
+ADD . ./sockethub
+RUN cd sockethub && npm install
+RUN ls 
+CMD cd sockethub && ./bin/docker.sh
 EXPOSE 10550
