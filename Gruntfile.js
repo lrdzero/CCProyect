@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 
+ 
   // Configuración del proyecto
   grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
@@ -28,10 +29,10 @@ module.exports = function(grunt) {
 
   // Carga el plugin de grunt para hacer esto
   grunt.loadNpmTasks('grunt-docco');
-
+  grunt.loadNpmTask('grunt-mocha-test');
   // Tarea por omisión: generar la documentación
   grunt.registerTask('default', ['docco']);
-  grunt.registerTask('default', 'mochaTest');
+  grunt.registerTask('mocha', ['mochaTest']);
 };
 
 
