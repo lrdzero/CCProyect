@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 
   // Carga el plugin de grunt para hacer esto
   grunt.loadNpmTasks('grunt-docco');
-  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-mocha');
   // Tarea por omisión: generar la documentación
   grunt.registerTask('default', ['docco']);
   grunt.registerTask('mocha', ['mochaTest']);
