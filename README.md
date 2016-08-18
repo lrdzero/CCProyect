@@ -335,5 +335,8 @@ CMD [ "npm", "start" ]
 
 ```
 
-Siguiendo los pasos descritos en el enlaze del ejercicio 12 llevamos a cabo el despliegue.
+Siguiendo los pasos descritos en el enlaze del ejercicio 12 llevamos a cabo el [despliegue](https://github.com/lrdzero/ejercicios/blob/master/ejercicios%203/ejercicio12.md).
 
+Y podemos comprobar que podemos realizar la descarga y el despliegue del repositorio.
+
+![](http://googledrive.com/host/0B6Q-phIC3pUpblVzUS1RbEZjb1E/fotito.png)
