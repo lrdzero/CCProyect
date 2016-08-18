@@ -14,22 +14,23 @@ module.exports = function(grunt) {
 	  }
 	  }
   },
-  mochaTest: {
-	test: {
-	   options:{
-		reporter: 'spec',
-		captureFile: 'docs/test/results.txt',
-		quiet: false,
-		clearRequireCache:false
-	    },
-	    src: ['test/**/*.js']
-	}
-  }
+   mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec',
+          captureFile: 'docs/results.txt', // Optionally capture the reporter output to a file 
+          quiet: false, // Optionally suppress output to standard out (defaults to false) 
+          clearRequireCache: false // Optionally clear the require cache before running tests (defaults to false) 
+        },
+        src: ['test/**/*.js']
+      }
+    }
   });
 
   // Carga el plugin de grunt para hacer esto
   grunt.loadNpmTasks('grunt-docco');
   grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-mocha-test');
   // Tarea por omisión: generar la documentación
   grunt.registerTask('default', ['docco','mochaTest']);
   
