@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		  output: 'docs/'
 	  }
 	  }
-  }
+  },
   mochaTest: {
 	test: {
 	   options:{
